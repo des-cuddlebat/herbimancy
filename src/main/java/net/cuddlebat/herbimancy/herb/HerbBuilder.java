@@ -1,0 +1,70 @@
+package net.cuddlebat.herbimancy.herb;
+
+import net.minecraft.block.Block;
+import net.minecraft.item.Item;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
+
+public class HerbBuilder
+{
+	private Item.Settings itemSettings;
+	private Block.Settings blockSettings;
+	private String id;
+	
+	public HerbBuilder(String id)
+	{
+		this.id = id;
+	}
+	
+	public HerbBuilder itemSettings(Item.Settings settings)
+	{
+		itemSettings = settings;
+		return this;
+	}
+	
+	public HerbBuilder blockSettings(Block.Settings settings)
+	{
+		blockSettings = settings;
+		return this;
+	}
+
+	public Item.Settings getItemSettings()
+	{
+		return itemSettings;
+	}
+
+	public Block.Settings getBlockSettings()
+	{
+		return blockSettings;
+	}
+	
+	public ModHerb build()
+	{
+		return new ModHerb(this);
+	}
+	
+	public void register(String modid, ModHerb herb)
+	{
+		Registry.register(Registry.BLOCK, new Identifier(modid, id + "_crop")       , herb.getCrop());
+		Registry.register(Registry.BLOCK, new Identifier(modid, id + "_crop_poor")  , herb.getPoorCrop());
+		Registry.register(Registry.BLOCK, new Identifier(modid, id + "_crop_rich")  , herb.getRichCrop());
+		Registry.register(Registry.BLOCK, new Identifier(modid, id + "_crop_synth") , herb.getSynthCrop());
+		
+		Registry.register(Registry.ITEM , new Identifier(modid, id + "_seeds")      , herb.getSeeds());
+		Registry.register(Registry.ITEM , new Identifier(modid, id + "_seeds_poor") , herb.getPoorSeeds());
+		Registry.register(Registry.ITEM , new Identifier(modid, id + "_seeds_rich") , herb.getRichSeeds());
+		Registry.register(Registry.ITEM , new Identifier(modid, id + "_seeds_synth"), herb.getSynthSeeds());
+		
+		Registry.register(Registry.ITEM , new Identifier(modid, id + "_fruit")      , herb.getFruit());
+		Registry.register(Registry.ITEM , new Identifier(modid, id + "_fruit_poor") , herb.getPoorFruit());
+		Registry.register(Registry.ITEM , new Identifier(modid, id + "_fruit_rich") , herb.getRichFruit());
+		Registry.register(Registry.ITEM , new Identifier(modid, id + "_fruit_synth"), herb.getSynthFruit());
+	}
+	
+	public ModHerb buildAndRegister(String modid)
+	{
+		ModHerb herb = build();
+		register(modid, herb);
+		return herb;
+	}
+}

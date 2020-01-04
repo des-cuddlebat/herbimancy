@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "herbimancy",
+  "version": "${version}",
+
+  "name": "Herbimancy",
+  "description": "This is an example description! Tell everyone what your mod is about!",
+  "authors": [
+    "des-cuddlebat"
+  ],
+  "contact": {
+    "homepage": "https://cuddlebat.net",
+    "sources": "https://github.com/des-cuddlebat/herbimancy"
+  },
+
+  "license": "MIT",
+  "icon": "assets/herbimancy/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.cuddlebat.herbimancy.Main"
+    ]
+  },
+  "mixins": [
+    "herbimancy.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.2",
+    "fabric": "*",
+    "minecraft": "1.15.x"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}
