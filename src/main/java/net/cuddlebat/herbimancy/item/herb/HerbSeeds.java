@@ -1,19 +1,21 @@
 package net.cuddlebat.herbimancy.item.herb;
 
+import net.cuddlebat.herbimancy.block.herb.HerbCrop;
 import net.cuddlebat.herbimancy.herb.HerbQuality;
 import net.cuddlebat.herbimancy.herb.ModHerb;
 import net.cuddlebat.herbimancy.util.ItemDurabilityBar;
+import net.minecraft.item.AliasedBlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public class HerbSeeds extends Item implements ItemDurabilityBar
+public class HerbSeeds extends AliasedBlockItem implements ItemDurabilityBar
 {
 	private final ModHerb herb;
 	private final HerbQuality quality;
 	
-	public HerbSeeds(Item.Settings settings, ModHerb herb, HerbQuality quality)
+	public HerbSeeds(Item.Settings settings, HerbCrop crop, ModHerb herb, HerbQuality quality)
 	{
-		super(settings);
+		super(crop, settings);
 		this.herb = herb;
 		this.quality = quality;
 	}

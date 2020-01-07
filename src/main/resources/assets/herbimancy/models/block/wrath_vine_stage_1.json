@@ -1,0 +1,6 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "herbimancy:blocks/wrath_vine_stage_1"
+    }
+}

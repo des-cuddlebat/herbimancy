@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "herbimancy:blocks/crystalline_lotus_stage_1"
+    }
+}

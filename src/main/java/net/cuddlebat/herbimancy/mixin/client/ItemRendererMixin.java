@@ -42,7 +42,7 @@ public abstract class ItemRendererMixin
 
 			BufferBuilder bufferBuilder = Tessellator.getInstance().getBuffer();
 
-			int length = (int) (13 * (1 - Math.max(0.0F, barItem.getDurabilityAmount(stack))));
+			int length = (int) (13 * Math.max(0.0F, barItem.getDurabilityAmount(stack)));
 			int color = barItem.getDurabilityBarColor(stack);
 
 			this.renderGuiQuad(bufferBuilder, x + 2, y + 13, 13, 2, 0, 0, 0, 255);

@@ -1,5 +1,8 @@
 package net.cuddlebat.herbimancy.herb;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
@@ -10,10 +13,16 @@ public class HerbBuilder
 	private Item.Settings itemSettings;
 	private Block.Settings blockSettings;
 	private String id;
+	private String essence;
+	private HerbType type;
+	private HerbClass clazz;
+	private HerbRarity rarity;
+	private Set<HerbTrait> traits = new HashSet<HerbTrait>();
 	
-	public HerbBuilder(String id)
+	public HerbBuilder(String id, String essence)
 	{
 		this.id = id;
+		this.essence = essence;
 	}
 	
 	public HerbBuilder itemSettings(Item.Settings settings)
@@ -66,5 +75,59 @@ public class HerbBuilder
 		ModHerb herb = build();
 		register(modid, herb);
 		return herb;
+	}
+
+	public HerbBuilder type(HerbType type)
+	{
+		this.type = type;
+		return this;
+	}
+
+	public HerbBuilder clazz(HerbClass clazz)
+	{
+		this.clazz = clazz;
+		return this;
+	}
+
+	public HerbBuilder rarity(HerbRarity rarity)
+	{
+		this.rarity = rarity;
+		return this;
+	}
+
+	public HerbBuilder trait(HerbTrait trait)
+	{
+		traits.add(trait);
+		return this;
+	}
+
+	public HerbType getType()
+	{
+		return type;
+	}
+
+	public HerbClass getClz()
+	{
+		return clazz;
+	}
+
+	public HerbRarity getRarity()
+	{
+		return rarity;
+	}
+
+	public Set<HerbTrait> getTraits()
+	{
+		return traits;
+	}
+
+	public String getId()
+	{
+		return id;
+	}
+
+	public String getEssenceName()
+	{
+		return essence;
 	}
 }

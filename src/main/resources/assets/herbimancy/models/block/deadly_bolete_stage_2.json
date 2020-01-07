@@ -1,0 +1,6 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "herbimancy:blocks/deadly_bolete_stage_2"
+    }
+}

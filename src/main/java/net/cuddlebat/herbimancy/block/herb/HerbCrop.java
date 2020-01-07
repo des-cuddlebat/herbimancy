@@ -3,8 +3,9 @@ package net.cuddlebat.herbimancy.block.herb;
 import net.cuddlebat.herbimancy.herb.HerbQuality;
 import net.cuddlebat.herbimancy.herb.ModHerb;
 import net.minecraft.block.Block;
+import net.minecraft.block.CropBlock;
 
-public class HerbCrop extends Block
+public class HerbCrop extends CropBlock
 {
 	private final ModHerb herb;
 	private final HerbQuality quality;

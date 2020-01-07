@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "herbimancy:blocks/midas_berry_stage_2"
+    }
+}

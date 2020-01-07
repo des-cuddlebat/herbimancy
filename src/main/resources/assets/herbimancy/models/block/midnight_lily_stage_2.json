@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "herbimancy:blocks/midnight_lily_stage_2"
+    }
+}

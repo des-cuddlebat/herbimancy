@@ -1,0 +1,6 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "herbimancy:blocks/iciclis_stage_3"
+    }
+}

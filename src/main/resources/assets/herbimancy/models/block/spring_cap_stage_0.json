@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "herbimancy:blocks/spring_cap_stage_0"
+    }
+}

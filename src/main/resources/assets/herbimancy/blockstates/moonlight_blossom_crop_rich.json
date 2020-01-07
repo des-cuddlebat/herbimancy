@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "age=0": { "model": "herbimancy:moonlight_blossom_stage_0" },
+        "age=1": { "model": "herbimancy:moonlight_blossom_stage_0" },
+        "age=2": { "model": "herbimancy:moonlight_blossom_stage_1" },
+        "age=3": { "model": "herbimancy:moonlight_blossom_stage_1" },
+        "age=4": { "model": "herbimancy:moonlight_blossom_stage_2" },
+        "age=5": { "model": "herbimancy:moonlight_blossom_stage_2" },
+        "age=6": { "model": "herbimancy:moonlight_blossom_stage_2" },
+        "age=7": { "model": "herbimancy:moonlight_blossom_stage_3" }
+    }
+}

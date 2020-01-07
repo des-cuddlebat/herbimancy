@@ -1,0 +1,6 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "herbimancy:blocks/insatiable_potato_stage_0"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "herbimancy:blocks/rainberry_stage_3"
+    }
+}

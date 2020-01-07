@@ -1,0 +1,6 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "herbimancy:blocks/cthulhus_bread_stage_2"
+    }
+}
